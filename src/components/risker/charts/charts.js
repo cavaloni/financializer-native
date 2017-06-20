@@ -63,20 +63,6 @@ class Charts extends Component {
         style: {
           overflow: 'hidden'
         },
-        // events: {
-        //   load: function () {
-
-        //     // set up the updating of the chart each second
-        //     var series = this.series[0];
-        //     setInterval(function () {
-        //       var x = (new Date()).getTime(), // current time
-        //         y = Math.random();
-        //       series.addPoint([
-        //         x, y
-        //       ], true, true);
-        //     }, 1000);
-        //   }
-        // }
       },
       colors: [
         '#5035F7', '#7265C4', '#9E9488', '#C48C65', '#9E7671'
