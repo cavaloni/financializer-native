@@ -29,7 +29,4 @@ BodyWrapper.propTypes = {
   children: React.PropTypes.array.isRequired
 };
 
-//    "color": "white"
-// "fontFamily": "'Raleway', sans-serif"
-
 export default BodyWrapper;

@@ -88,6 +88,8 @@ class Adjuster extends Component {
       head = <Text>Suggested transfers to match risk level</Text>;
     }
 
+    console.log(movesDisplay)
+
     return (
       <View style={styles.movesList}>
         {head}
@@ -100,8 +102,7 @@ class Adjuster extends Component {
 Adjuster.propTypes = {
   riskLevels: React
     .PropTypes
-    .arrayOf(React.PropTypes.number)
-    .isRequired,
+    .arrayOf(React.PropTypes.number),
   actNums: React
     .PropTypes
     .shape({
@@ -109,8 +110,7 @@ Adjuster.propTypes = {
       bonds: React.PropTypes.number, 
       stocks: React.PropTypes.number, 
       gold: React.PropTypes.number, 
-      annuities: React.PropTypes.number})
-    .isRequired
+      annuities: React.PropTypes.number}),
 };
 
 const mapStateToProps = (state, props) => ({ // eslint-disable-line

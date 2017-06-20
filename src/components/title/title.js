@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
         "backgroundColor": "#EAE6E1"
     },
     "heading": {
-        // "fontFamily": "'Open Sans Condensed', sans-serif",
+        "fontFamily": "Open Sans Condensed",
         "margin": 20,
         "fontSize": 40,
         "color": "#5095cb",
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
         "right": 20,
         "bottom": 5,
         "alignSelf": "flex-end",
-        // "fontFamily": "'Open Sans Condensed', sans-serif",
+        "fontFamily": "Open Sans Condensed",
         "fontSize": 17,
     }
 })

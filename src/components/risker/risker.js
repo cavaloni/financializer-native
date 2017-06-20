@@ -6,6 +6,9 @@ import * as actions from '../../actions/index';
 import Charts from './charts/charts'
 
 const styles = StyleSheet.create({
+    "texts": {
+        "fontFamily": "Raleway"
+    },
     "container": {
         "alignItems": "center",
         "display": "flex",
@@ -61,7 +64,7 @@ class Risker extends Component {
         console.log(this.props.level);
         return (
             <View style={styles.container}>
-                <Text>What is your preferred level of financial risk?</Text>
+                <Text style={styles.texts}>What is your preferred level of financial risk?</Text>
                 <View style={styles.slide_num}>
                     <Text style={styles.risk_val}>{this.state.riskVal}</Text>
                     <Slider
@@ -80,7 +83,7 @@ class Risker extends Component {
         );
     }
 }
-//break
+
 const mapStateToProps = (state, props) => ({level: state.level})
 
 export default connect(mapStateToProps)(Risker);

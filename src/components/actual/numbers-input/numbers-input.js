@@ -3,6 +3,9 @@ import {Text, View, StyleSheet, TextInput} from 'react-native';
 
 
 const styles = StyleSheet.create({
+   "texts": {
+        "fontFamily": "Raleway"
+    },
   "actual_numbers": {
     "textAlign": "center",
     
@@ -14,7 +17,7 @@ const styles = StyleSheet.create({
       height: 2,
     },
     "shadowRadius": 10,
-    // "fontFamily": "'Raleway', sans-serif",
+    "fontFamily": "Raleway",
   },
   "input_container": {
     "display": "flex",
@@ -26,7 +29,7 @@ class NumbersInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      numInput: 0
+      numInput: '0'
     };
     this.handleInputChange = this
       .handleInputChange
@@ -53,7 +56,7 @@ class NumbersInput extends Component {
     const {invType} = this.props;
     return (
       <View style={styles.input_container}>
-        <Text>{invType}</Text>
+        <Text style={styles.texts}>{invType}</Text>
         <TextInput
           style={styles.actual_numbers}
           name={invType}

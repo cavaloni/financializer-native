@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {connect} from 'react-redux';
 import * as actions from '../../../actions/index';
+import ChartView from 'react-native-highcharts';
 
 // const ReactHighcharts = require('react-highcharts');
 
@@ -49,6 +50,7 @@ class Charts extends Component {
   }
 
   render() {
+    const Highcharts = 'Highcharts';
     const chartOptions = {
       chart: {
         plotBackgroundColor: null,
@@ -60,7 +62,21 @@ class Charts extends Component {
         ],
         style: {
           overflow: 'hidden'
-        }
+        },
+        // events: {
+        //   load: function () {
+
+        //     // set up the updating of the chart each second
+        //     var series = this.series[0];
+        //     setInterval(function () {
+        //       var x = (new Date()).getTime(), // current time
+        //         y = Math.random();
+        //       series.addPoint([
+        //         x, y
+        //       ], true, true);
+        //     }, 1000);
+        //   }
+        // }
       },
       colors: [
         '#5035F7', '#7265C4', '#9E9488', '#C48C65', '#9E7671'
@@ -148,20 +164,25 @@ class Charts extends Component {
         style={{
         "minWidth": 100,
         "maxWidth": 600,
-        "margin": 0,
+        "margin": 0
       }}>
-        {/*<ReactHighcharts config={chartOptions} />*/}
+        <ChartView
+          style={{
+            height: 300
+          }}
+          config={chartOptions}
+          javaScriptEnabled={true}
+          domStorageEnabled={true}/>
       </View>
     );
   }
 }
 
 Charts.propTypes = {
-  risk: React.PropTypes.number.isRequired,
+  risk: React.PropTypes.number,
   riskLevels: React
     .PropTypes
-    .arrayOf(React.PropTypes.number)
-    .isRequired,
+    .arrayOf(React.PropTypes.number),
   dispatch: React.PropTypes.func.isRequired
 };
 

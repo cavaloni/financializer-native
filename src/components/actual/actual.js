@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
       height: 2,
     },
     shadowRadius: 10,
-    // fontFamily: 'Raleway, sans-serif',
+    fontFamily: 'Raleway',
     backgroundColor: '#46638f',
     width: 100,
     height: 30,
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
   "head": {
     "margin": 0,
     "marginBottom": 20,
+    "fontFamily": "Raleway",
   }
 
 })
