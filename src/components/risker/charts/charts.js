@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import * as actions from '../../../actions/index';
 import ChartView from 'react-native-highcharts';
 
-// const ReactHighcharts = require('react-highcharts');
 
 class Charts extends Component {
   constructor(props) {
@@ -81,6 +80,7 @@ class Charts extends Component {
       },
       plotOptions: {
         pie: {
+          animation: false,
           borderWidth: 0,
           dataLabels: {
             enabled: true,

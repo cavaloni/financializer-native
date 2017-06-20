@@ -2,19 +2,19 @@ import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  "texts": {
-    "fontFamily": "Raleway"
+  texts: {
+    fontFamily: 'Raleway'
   },
-  "mover": {
-    "margin": 20,
-    "borderBottomWidth": 1,
-    "borderColor": 'brown',
-    "padding": 7
+  mover: {
+    margin: 20,
+    borderBottomWidth: 1,
+    borderColor: 'brown',
+    padding: 7
   },
-  "b": {
-    "fontFamily": "Raleway",
-    "fontWeight": "bold",
-    "color": "#46638f"
+  b: {
+    fontFamily: 'Raleway',
+    fontWeight: 'bold',
+    color: '#46638f'
   }
 })
 

@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     shadowColor: 'rgba(10, 10, 10, .2)',
     shadowOffset: {
       width: 2,
-      height: 2,
+      height: 2
     },
     shadowRadius: 10,
     fontFamily: 'Raleway',
@@ -24,13 +24,13 @@ const styles = StyleSheet.create({
     height: 30,
     margin: 10,
     fontSize: 15,
-    color: 'white',
+    color: 'white'
   },
 
-  "head": {
-    "margin": 0,
-    "marginBottom": 20,
-    "fontFamily": "Raleway",
+  head: {
+    margin: 0,
+    marginBottom: 20,
+    fontFamily: "Raleway"
   }
 
 })
@@ -54,11 +54,23 @@ class Actual extends Component {
       .bind(this);
   }
 
+  getNumsCounter = 0;
+
   getNums(e, invType) {
-    this.setState({[invType]: Number(e), getNums: false});
+    this.setState({
+      [invType]: Number(e),
+      getNums: false
+    }, () => {
+      this.getNumsCounter += 1
+      if (this.getNumsCounter === 5) {
+        this.pushActuals();
+        this.getNumsCounter = 0;
+      }
+    });
   }
 
   pushActuals() {
+    console.log('this happened')
     const actNums = {
       cash: this.state.cash,
       bonds: this.state.bonds,
@@ -72,13 +84,9 @@ class Actual extends Component {
   }
 
   triggerCollectNums() {
-    this.setState({
-      getNums: true
-    }, () => {
-      this.pushActuals();
-    });
+    this.setState({getNums: true})
   }
-  // word
+
   render() {
     return (
       <View style={styles.actual}>
@@ -103,9 +111,10 @@ class Actual extends Component {
           invType="Annuities"
           numCallBack={this.getNums}
           getNums={this.state.getNums}/>
-        <Button style={styles.calculate} onPress={this.triggerCollectNums} title="Calculate">
-          
-        </Button>
+        <Button
+          style={styles.calculate}
+          onPress={this.triggerCollectNums}
+          title="Calculate"></Button>
       </View>
     );
   }

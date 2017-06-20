@@ -3,25 +3,24 @@ import {Text, View, StyleSheet, TextInput} from 'react-native';
 
 
 const styles = StyleSheet.create({
-   "texts": {
-        "fontFamily": "Raleway"
-    },
-  "actual_numbers": {
-    "textAlign": "center",
-    
-    "backgroundColor": "hsla(0, 0%, 100%, .2)",
-    "marginBottom": 10,
-    "shadowColor": "rgba(10, 10, 10, .2)",
-    "shadowOffset": {
-      width: 2,
-      height: 2,
-    },
-    "shadowRadius": 10,
-    "fontFamily": "Raleway",
+  texts: {
+    fontFamily: 'Raleway'
   },
-  "input_container": {
-    "display": "flex",
-    "justifyContent": "space-between"
+  actual_numbers: {
+    textAlign: 'center',
+    backgroundColor: 'hsla(0, 0%, 100%, .2)',
+    marginBottom: 10,
+    shadowColor: 'rgba(10, 10, 10, .2)',
+    shadowOffset: {
+      width: 2,
+      height: 2
+    },
+    shadowRadius: 10,
+    fontFamily: 'Raleway'
+  },
+  input_container: {
+    display: 'flex',
+    justifyContent: 'space-between'
   }
 })
 

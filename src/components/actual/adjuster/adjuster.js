@@ -5,16 +5,16 @@ import Move from './move/move';
 
 
 const styles = StyleSheet.create({
-  "movesList": {
-    "display": "flex",
-    "flexDirection": "column",
-    "marginLeft": 20,
+  movesList: {
+    flexDirection: "column",
+    marginLeft: 20,
   }
 })
 
 class Adjuster extends Component {
 
   calculateMoves(actNums) {
+    console.log(this.props.actNums)
     let total = 0;
     for (const num in actNums) { // eslint-disable-line
       total += actNums[num];
@@ -87,8 +87,6 @@ class Adjuster extends Component {
       movesDisplay = moves.map(move => (<Move from={move[1]} to={move[0]} amount={move[2]} key={moves.indexOf(move)}/>));
       head = <Text>Suggested transfers to match risk level</Text>;
     }
-
-    console.log(movesDisplay)
 
     return (
       <View style={styles.movesList}>

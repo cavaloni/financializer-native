@@ -6,35 +6,34 @@ import * as actions from '../../actions/index';
 import Charts from './charts/charts'
 
 const styles = StyleSheet.create({
-    "texts": {
-        "fontFamily": "Raleway"
-    },
-    "container": {
-        "alignItems": "center",
-        "display": "flex",
-        "flexDirection": "row",
-        "justifyContent": "space-around",
-        "flexWrap": "wrap",
-        "flexGrow": 1,
-        "flexBasis": "65%",
-    },
-    "chart_wrapper": {
-        "flexBasis": "100%",
-    },
-    "slide_num": {
-        "display": "flex",
-        "flexDirection": "row",
-        
-    },
-    "risk_val": {
-        "margin": 6,
-    },
-    "slider": {
-        "flexBasis": "90%",
-        "height": 20,
-        "marginTop": 6.35,
-        "backgroundColor": "transparent"
-    }
+  texts: {
+    fontFamily: 'Raleway',
+  },
+  container: {
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    flexWrap: 'wrap',
+    flexGrow: 1,
+    flexBasis: '65%',
+  },
+  chart_wrapper: {
+    flexBasis: '100%',
+  },
+  slide_num: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  risk_val: {
+    margin: 6,
+  },
+  slider: {
+    flexBasis: '90%',
+    height: 20,
+    marginTop: 6.35,
+    backgroundColor: 'transparent',
+  },
 })
 
 class Risker extends Component {
@@ -61,7 +60,6 @@ class Risker extends Component {
     }
 
     render() {
-        console.log(this.props.level);
         return (
             <View style={styles.container}>
                 <Text style={styles.texts}>What is your preferred level of financial risk?</Text>

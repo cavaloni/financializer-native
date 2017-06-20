@@ -3,27 +3,26 @@ import {Text, View, StyleSheet} from 'react-native';
 
 
 const styles = StyleSheet.create({
-    "title_bar": {
-        "display": "flex",
-        "justifyContent": "space-between",
-        "height": 100,
-        "backgroundColor": "#EAE6E1"
-    },
-    "heading": {
-        "fontFamily": "Open Sans Condensed",
-        "margin": 20,
-        "fontSize": 40,
-        "color": "#5095cb",
-        // "textShadow": "grey 1px 1px 1"
-    },
-    "sub_title": {
-        "position": "relative",
-        "right": 20,
-        "bottom": 5,
-        "alignSelf": "flex-end",
-        "fontFamily": "Open Sans Condensed",
-        "fontSize": 17,
-    }
+  title_bar: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    height: 100,
+    backgroundColor: '#EAE6E1',
+  },
+  heading: {
+    fontFamily: 'Open Sans Condensed',
+    margin: 20,
+    fontSize: 40,
+    color: '#5095cb',
+  },
+  sub_title: {
+    position: 'relative',
+    right: 20,
+    bottom: 5,
+    alignSelf: 'flex-end',
+    fontFamily: 'Open Sans Condensed',
+    fontSize: 17,
+  },
 })
 //stuff 
 const Title = function () {
