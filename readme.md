@@ -36,6 +36,7 @@ Time taken for each aspect of the work was as follows:
 
 * 4.5 hours (thats right! not a typo!) to setup developer enrionment
 * The reason for this was due to two things: 1) Android Studio's notoriously slow download speeds for the required packages. 2) My phone would not show up on the computer side after an hour of debugging into the reason it may be. Then Virtual environments were tried, but both cases (Android Studio, and Genymotion) both resulted in much greater depth needing to discover the reasons why they would not work. In the process I discovered Expo, which is like Ruby on Rails for React Native. Wonderful app that makes developer life easier.
-* 5 Hours developing/converting from the web version React app to using React Native.
+* 6.6 Hours developing/converting from the web version React app to using React Native.
+* 1.5 hours of the above time was spent purely learning React-Native, but most of it was mixed with the developmental aspect.
 
-Total time so far: 9.5 hours
+Total time so far: 11 hours
